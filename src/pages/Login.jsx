@@ -1,132 +1,96 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { base44 } from "@/api/base44Client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { LogIn, Mail, Lock, Loader2 } from "lucide-react";
-import AuthLayout from "@/components/AuthLayout";
-import GoogleIcon from "@/components/GoogleIcon";
-import { safeReturnTo } from "@/lib/authReturnTo";
+import BlueprintHero from "@/components/BlueprintHero";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  // Post-login destination (e.g. the MCP OAuth consent page sends users here
-  // with returnTo so the grant flow can resume). Same-origin paths only.
-  const returnTo = safeReturnTo();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-    try {
-      await base44.auth.loginViaEmailPassword(email, password);
-      window.location.href = returnTo;
-    } catch (err) {
-      setError(err.message || "Invalid email or password");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleGoogle = () => {
-    base44.auth.loginWithProvider("google", returnTo);
-  };
-
   return (
-    <AuthLayout
-      icon={LogIn}
-      title="Welcome back"
-      subtitle="Log in to your account"
-      footer={
-        <>
-          Don't have an account?{" "}
-          <Link
-            to={"/register" + (returnTo !== "/" ? "?returnTo=" + encodeURIComponent(returnTo) : "")}
-            className="text-primary font-medium hover:underline"
-          >
-            Create one
-          </Link>
-        </>
-      }
+    <div
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      style={{ backgroundColor: "#0D1F3C" }}
     >
-      <Button
-        variant="outline"
-        className="w-full h-12 text-sm font-medium mb-6"
-        onClick={handleGoogle}
-      >
-        <GoogleIcon className="w-5 h-5 mr-2" />
-        Continue with Google
-      </Button>
+      {/* Blurred background grid — teases Phase 2 dashboard */}
+      <div
+        className="absolute inset-0 blueprint-grid-dark opacity-60"
+        style={{ filter: "blur(0px)" }}
+      />
 
-      <div className="relative mb-6">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-border" />
-        </div>
-        <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-card px-3 text-muted-foreground">or</span>
+      {/* Faint dashboard preview lines */}
+      <div className="absolute inset-0 opacity-10" style={{ pointerEvents: "none" }}>
+        <BlueprintHero className="absolute -right-20 -bottom-20 w-[600px] opacity-30" />
+        <div className="absolute top-12 left-8 right-8 h-8" style={{ border: "1px solid rgba(42,74,127,0.3)", background: "rgba(42,74,127,0.1)" }} />
+        <div className="absolute top-28 left-8 w-48 h-4" style={{ background: "rgba(42,74,127,0.15)" }} />
+        <div className="absolute top-40 left-8 right-8 grid grid-cols-4 gap-3" style={{ height: "80px" }}>
+          {[0,1,2,3].map(i => <div key={i} style={{ background: "rgba(42,74,127,0.1)", border: "1px solid rgba(42,74,127,0.2)" }} />)}
         </div>
       </div>
 
-      {error && (
-        <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
-          {error}
-        </div>
-      )}
+      {/* Glass card */}
+      <div
+        className="relative z-10 w-full max-w-md mx-4 p-10 text-center"
+        style={{
+          background: "rgba(13,31,60,0.92)",
+          border: "1px solid rgba(42,74,127,0.5)",
+          backdropFilter: "blur(8px)",
+        }}
+      >
+        {/* Corner accents */}
+        <div className="absolute top-0 left-0 w-5 h-5" style={{ borderTop: "2px solid #E8820C", borderLeft: "2px solid #E8820C" }} />
+        <div className="absolute top-0 right-0 w-5 h-5" style={{ borderTop: "2px solid #E8820C", borderRight: "2px solid #E8820C" }} />
+        <div className="absolute bottom-0 left-0 w-5 h-5" style={{ borderBottom: "2px solid rgba(42,74,127,0.6)", borderLeft: "2px solid rgba(42,74,127,0.6)" }} />
+        <div className="absolute bottom-0 right-0 w-5 h-5" style={{ borderBottom: "2px solid rgba(42,74,127,0.6)", borderRight: "2px solid rgba(42,74,127,0.6)" }} />
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
-          <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
-            <Input
-              id="email"
-              type="email"
-              autoComplete="email"
-              autoFocus
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="pl-10 h-12"
-              required
-            />
+        <div className="ref-label mb-4">REF: PORTAL-PHASE2</div>
+
+        {/* FE logo */}
+        <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="w-8 h-8 flex items-center justify-center" style={{ backgroundColor: "#E8820C" }}>
+            <span style={{ color: "#0D1F3C", fontWeight: 900, fontSize: "14px" }}>FE</span>
           </div>
+          <span style={{ color: "#F5F4F2", fontWeight: 800, fontSize: "14px" }}>FOUNDRY</span>
+          <span style={{ color: "#E8820C", fontWeight: 800, fontSize: "14px" }}>ESTIMATING</span>
         </div>
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <Label htmlFor="password">Password</Label>
-            <Link to="/forgot-password" className="text-xs text-primary hover:underline">
-              Forgot password?
-            </Link>
-          </div>
-          <div className="relative">
-            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
-            <Input
-              id="password"
-              type="password"
-              autoComplete="current-password"
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="pl-10 h-12"
-              required
-            />
-          </div>
+
+        <div
+          className="inline-block px-3 py-1 mb-6"
+          style={{ background: "rgba(232,130,12,0.15)", border: "1px solid rgba(232,130,12,0.4)", fontSize: "11px", fontWeight: 700, color: "#E8820C", letterSpacing: "0.12em", textTransform: "uppercase" }}
+        >
+          Coming Soon
         </div>
-        <Button type="submit" className="w-full h-12 font-medium" disabled={loading}>
-          {loading ? (
-            <>
-              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              Logging in...
-            </>
-          ) : (
-            "Log in"
-          )}
-        </Button>
-      </form>
-    </AuthLayout>
+
+        <h1 style={{ color: "#F5F4F2", fontSize: "28px", fontWeight: 900, letterSpacing: "-0.02em", marginBottom: "12px" }}>
+          Client Portal
+        </h1>
+
+        <p style={{ color: "rgba(245,244,242,0.55)", fontSize: "15px", lineHeight: 1.7, marginBottom: "32px" }}>
+          The client portal — including bid-status tracking, capacity calendar, and document access — is launching in Phase 2.
+        </p>
+
+        <div
+          className="p-4 mb-8 text-left"
+          style={{ border: "1px solid rgba(42,74,127,0.4)", background: "rgba(42,74,127,0.1)" }}
+        >
+          <div className="eyebrow mb-3">Phase 2 Features</div>
+          {["Bid-status dashboard", "Tender pipeline tracking", "Capacity calendar", "Document & submission access", "Direct messaging"].map((f) => (
+            <div key={f} className="flex items-center gap-2 py-1" style={{ color: "rgba(245,244,242,0.5)", fontSize: "13px" }}>
+              <div style={{ width: "4px", height: "4px", background: "#E8820C", flexShrink: 0 }} />
+              {f}
+            </div>
+          ))}
+        </div>
+
+        <Link to="/contact" className="btn-amber block text-center w-full">
+          Register Your Interest →
+        </Link>
+
+        <Link
+          to="/"
+          className="block mt-4"
+          style={{ color: "rgba(245,244,242,0.4)", fontSize: "13px", textDecoration: "none" }}
+          onMouseEnter={e => (e.target.style.color = "rgba(245,244,242,0.8)")}
+          onMouseLeave={e => (e.target.style.color = "rgba(245,244,242,0.4)")}
+        >
+          ← Back to main site
+        </Link>
+      </div>
+    </div>
   );
 }

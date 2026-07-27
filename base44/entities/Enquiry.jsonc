@@ -1,0 +1,50 @@
+{
+  "name": "Enquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "company": {
+      "type": "string",
+      "title": "Company"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email Address"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone Number"
+    },
+    "project_type": {
+      "type": "string",
+      "title": "Project Type / Sector"
+    },
+    "message": {
+      "type": "string",
+      "title": "Message"
+    },
+    "submitted_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Submitted Date"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "new",
+        "contacted",
+        "closed"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "message"
+  ]
+}

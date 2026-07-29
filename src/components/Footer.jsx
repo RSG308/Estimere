@@ -52,23 +52,14 @@ export default function Footer() {
           <div>
             <div className="eyebrow mb-5">Services</div>
             <ul className="space-y-3">
-              {[
-                "Cost Estimating",
-                "Bid Writing",
-                "Full Tender Management",
-                "PQQ / SQ Support",
-                "Bid Review",
-                "Post-Tender Support",
-                "Social Value & Carbon",
-                "Knowledge Transfer",
-              ].map((s) => (
-                <li key={s}>
+              {services.slice(0, 8).map((s) => (
+                <li key={s.slug}>
                   <Link
-                    to="/services"
+                    to={`/services/${s.slug}`}
                     style={{ color: "rgba(245,244,242,0.6)", fontSize: "14px", transition: "color 0.15s" }}
                     className="hover:text-white"
                   >
-                    {s}
+                    {s.title}
                   </Link>
                 </li>
               ))}

@@ -12,6 +12,7 @@ import Layout from "@/components/Layout";
 // Pages
 import Home from "@/pages/Home";
 import Services from "@/pages/Services";
+import ServiceDetail from "@/pages/ServiceDetail";
 import Pricing from "@/pages/Pricing";
 import CaseStudies from "@/pages/CaseStudies";
 import About from "@/pages/About";
@@ -35,6 +36,7 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/about" element={<About />} />

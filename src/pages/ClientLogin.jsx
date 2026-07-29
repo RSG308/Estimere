@@ -76,7 +76,7 @@ export default function ClientLogin() {
             marginBottom: "40px",
           }}
         >
-          The Foundry Estimating client portal will provide secure, real-time access to your bid-status dashboard, tender programme, and capacity calendar.
+          The Estimere client portal will provide secure, real-time access to your bid-status dashboard, tender programme, and capacity calendar.
         </p>
 
         {/* Feature teasers */}

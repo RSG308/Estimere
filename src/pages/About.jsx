@@ -112,7 +112,7 @@ export default function About() {
                 <div className="space-y-5" style={{ color: "#1A1A1A", opacity: 0.7, fontSize: "17px", lineHeight: 1.8 }}>
                   <p>
                     {/* [PLACEHOLDER: Replace with real founder bio paragraph 1] */}
-                    [Founder Name] founded Foundry Estimating after over a decade of in-house estimating and bid-writing experience across some of the UK's most complex infrastructure and built environment projects. [He/She/They] has worked within both specialist subcontractor and principal contractor environments — gaining a rare, dual-perspective understanding of what it takes to price accurately and write compellingly at every tier of the supply chain.
+                    [Founder Name] founded Estimere after over a decade of in-house estimating and bid-writing experience across some of the UK's most complex infrastructure and built environment projects. [He/She/They] has worked within both specialist subcontractor and principal contractor environments — gaining a rare, dual-perspective understanding of what it takes to price accurately and write compellingly at every tier of the supply chain.
                   </p>
                   <p>
                     {/* [PLACEHOLDER: Replace with real founder bio paragraph 2] */}
@@ -120,7 +120,7 @@ export default function About() {
                   </p>
                   <p>
                     {/* [PLACEHOLDER: Replace with real founder bio paragraph 3] */}
-                    Foundry Estimating was established to give UK contractors — at every tier — access to that depth of experience on a flexible, project-by-project basis. The consultancy model means clients get a genuinely senior resource, fully engaged with their project, without the six-figure salary, employment costs, or long-term commitment of a permanent hire.
+                    Estimere was established to give UK contractors — at every tier — access to that depth of experience on a flexible, project-by-project basis. The consultancy model means clients get a genuinely senior resource, fully engaged with their project, without the six-figure salary, employment costs, or long-term commitment of a permanent hire.
                   </p>
                 </div>
               </ScrollReveal>
@@ -171,7 +171,7 @@ export default function About() {
                       Most SME and regional contractors don't need that resource full-time, year-round. They need it when they're bidding — which is precisely when they're already under pressure.
                     </p>
                     <p style={{ color: "#F5F4F2", fontWeight: 600 }}>
-                      Foundry Estimating exists to solve that. Senior expertise, engaged when you need it, stood down when you don't. No overhead, no long-term commitment, no compromise on quality.
+                      Estimere exists to solve that. Senior expertise, engaged when you need it, stood down when you don't. No overhead, no long-term commitment, no compromise on quality.
                     </p>
                   </div>
                 </div>

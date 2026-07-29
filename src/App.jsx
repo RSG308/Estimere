@@ -17,6 +17,9 @@ import CaseStudies from "@/pages/CaseStudies";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import ClientLogin from "@/pages/ClientLogin";
+import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
+import Cookies from "@/pages/Cookies";
 
 function App() {
   return (
@@ -36,6 +39,11 @@ function App() {
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+
+              {/* Legal */}
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
             </Route>
 
             <Route path="*" element={<PageNotFound />} />

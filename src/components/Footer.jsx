@@ -109,8 +109,33 @@ export default function Footer() {
           style={{ borderTop: "1px solid rgba(214,211,205,0.1)" }}
         >
           <p style={{ color: "rgba(245,244,242,0.35)", fontSize: "12px" }}>
-            © {new Date().getFullYear()} Estimere. All rights reserved. {/* [PLACEHOLDER: update business name] */}
+            © {new Date().getFullYear()} Estimere. All rights reserved.
           </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Link
+              to="/privacy"
+              style={{ color: "rgba(245,244,242,0.45)", fontSize: "12px" }}
+              className="hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/cookies"
+              style={{ color: "rgba(245,244,242,0.45)", fontSize: "12px" }}
+              className="hover:text-white transition-colors"
+            >
+              Cookie Policy
+            </Link>
+            <Link
+              to="/terms"
+              style={{ color: "rgba(245,244,242,0.45)", fontSize: "12px" }}
+              className="hover:text-white transition-colors"
+            >
+              Terms of Use
+            </Link>
+          </div>
+
           <p style={{ color: "rgba(245,244,242,0.25)", fontSize: "11px", fontFamily: "monospace", letterSpacing: "0.08em" }}>
             Professional Indemnity Insured · UK Registered
           </p>

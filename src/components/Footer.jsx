@@ -29,6 +29,7 @@ export default function Footer() {
               {[
                 { label: "Home", path: "/" },
                 { label: "Services", path: "/services" },
+                { label: "Sectors", path: "/sectors" },
                 { label: "Pricing", path: "/pricing" },
                 { label: "Case Studies", path: "/case-studies" },
                 { label: "About", path: "/about" },

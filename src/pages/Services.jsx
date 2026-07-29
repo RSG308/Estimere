@@ -1,153 +1,23 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import {
-  Calculator, FileText, Layers, Shield, Search, Zap, MessageSquare, Leaf, GraduationCap
-} from "lucide-react";
-
-const services = [
-  {
-    ref: "SVC-001",
-    icon: Shield,
-    title: "Pre-Qualification & PQQ / SQ Support",
-    sector: "All Sectors",
-    short: "Getting past the gateway.",
-    desc: "Many tenders are lost before a price is ever submitted — at the pre-qualification or selection questionnaire stage. We prepare rigorous, well-evidenced PQQ and SQ responses that present your organisation credibly and maximise your score at each gateway.",
-    deliverables: [
-      "PQQ / SQ response writing and editing",
-      "Company capability and track record narratives",
-      "Financial standing and insurance documentation review",
-      "Health & safety questionnaire support",
-      "Subcontractor and supply chain statements",
-    ],
-  },
-  {
-    ref: "SVC-002",
-    icon: Calculator,
-    title: "Cost Estimating",
-    sector: "Civils · Utilities · MEPH · Principal Contractor",
-    short: "First-principles accuracy. Every time.",
-    desc: "We build estimates from the ground up — no rule-of-thumb shortcuts. From detailed take-off through to subcontractor and supplier enquiry management, rate builds, and final summary sheets, every figure is traceable and defensible at adjudication.",
-    deliverables: [
-      "Detailed quantity take-off from drawings and specifications",
-      "First-principles rate builds (labour, plant, materials)",
-      "Subcontractor and supplier enquiry management",
-      "Domestic sub-contractor comparison and analysis",
-      "Risk and contingency quantification",
-      "Estimate summary and cost plan production",
-    ],
-  },
-  {
-    ref: "SVC-003",
-    icon: FileText,
-    title: "Bid Writing",
-    sector: "All Sectors",
-    short: "Words that win work.",
-    desc: "A technically accurate price is only half the battle. We write quality, technical, and method submissions that communicate your approach clearly, score well against evaluation criteria, and differentiate your bid from the competition.",
-    deliverables: [
-      "Method statements (construction, programme, logistics)",
-      "Executive summaries and commercial overviews",
-      "Quality, H&S, and environment submissions",
-      "Technical response writing against ITT questions",
-      "Tender interview and presentation support",
-    ],
-  },
-  {
-    ref: "SVC-004",
-    icon: Layers,
-    title: "Full Tender Management",
-    sector: "All Sectors",
-    short: "End-to-end. Start to submit.",
-    desc: "For organisations without in-house estimating resource — or for strategic bids that need dedicated senior attention — we manage the entire tender cycle from invitation through to final submission and adjudication.",
-    deliverables: [
-      "Tender programme and milestone management",
-      "Document control and query management (RFIs)",
-      "End-to-end estimate production",
-      "Quality and technical submission writing",
-      "Pre-submission review and QA",
-      "Adjudication support and final submission",
-    ],
-  },
-  {
-    ref: "SVC-005",
-    icon: Search,
-    title: "Bid Review / Second Opinion",
-    sector: "All Sectors",
-    short: "QA before you submit.",
-    desc: "An independent review of an already-prepared bid before it leaves the building. We check pricing logic, identify gaps, assess risk exposure, and review quality responses against evaluation criteria — giving you confidence or catching issues while there's still time to act.",
-    deliverables: [
-      "Commercial and pricing logic review",
-      "Risk and qualification schedule audit",
-      "Quality submission scoring assessment",
-      "Clarification and assumption review",
-      "Written findings report with recommended actions",
-    ],
-  },
-  {
-    ref: "SVC-006",
-    icon: Zap,
-    title: "Rapid Go / No-Go Feasibility Costing",
-    sector: "All Sectors",
-    short: "Is it worth bidding? Know fast.",
-    desc: "Before committing a team to a full tender programme, get a fast, high-level cost sense-check. We rapidly assess drawings, specifications, and any available data to produce an order-of-magnitude cost position — helping you make an informed go/no-go decision.",
-    deliverables: [
-      "High-level order-of-magnitude cost estimate",
-      "Key risk and uncertainty identification",
-      "Preliminary programme assessment",
-      "Written summary and recommendation",
-    ],
-  },
-  {
-    ref: "SVC-007",
-    icon: MessageSquare,
-    title: "Post-Tender Support",
-    sector: "All Sectors",
-    short: "After submission. Before contract.",
-    desc: "The period between submission and award is critical and often under-resourced. We support with clarification responses, commercial negotiation preparation, adjudication assistance, and mobilisation cost reviews.",
-    deliverables: [
-      "Tender clarification and BAFO response preparation",
-      "Commercial negotiation briefing support",
-      "Adjudication cost and risk review",
-      "Contract review and mobilisation cost assessment",
-    ],
-  },
-  {
-    ref: "SVC-008",
-    icon: Leaf,
-    title: "Social Value & Carbon / Embodied-Carbon Costing",
-    sector: "All Sectors",
-    short: "Measuring what matters more than ever.",
-    desc: "Social value and carbon commitments are increasingly scored criteria in UK public sector tenders. We help quantify, evidence, and present social value commitments and support embodied-carbon costing within your estimate and quality submission.",
-    deliverables: [
-      "Social value framework response and quantification",
-      "Embodied carbon baseline costing (EPDs, material schedules)",
-      "Carbon reduction narrative writing",
-      "TOMS / Themes, Outcomes, Measures support",
-    ],
-  },
-  {
-    ref: "SVC-009",
-    icon: GraduationCap,
-    title: "Knowledge Transfer & Mentoring",
-    sector: "All Sectors",
-    short: "Building your team's capability.",
-    desc: "For clients who want to develop their in-house estimating function, we offer structured mentoring and knowledge-transfer programmes for junior estimators and bid coordinators — working alongside your team on live bids to build capability from the inside.",
-    deliverables: [
-      "One-to-one mentoring for junior estimators",
-      "Live bid shadowing and structured review sessions",
-      "Estimating process and template development",
-      "Rate library and benchmark database setup",
-      "Bid programme and document control training",
-    ],
-  },
-];
+import useSEO from "@/hooks/useSEO";
+import { services } from "@/data/services";
 
 export default function Services() {
+  useSEO({
+    title: "Services | Construction Estimating & Bid Writing | Estimere",
+    description:
+      "Nine service lines covering the full tender lifecycle — PQQ support, cost estimating, bid writing, tender management, bid review and post-tender support.",
+    path: "/services",
+  });
+
   return (
     <div>
       {/* Header */}
       <section
         className="blueprint-grid-dark py-24"
-        style={{ backgroundColor: "#0D1F3C" }}
+        style={{ backgroundColor: "#0D1F3C", position: "relative" }}
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="eyebrow mb-3">Service Ledger</div>
@@ -289,6 +159,20 @@ export default function Services() {
                           ))}
                         </ul>
                       </div>
+
+                      {/* Detail page link */}
+                      <Link
+                        to={`/services/${svc.slug}`}
+                        className="inline-flex items-center gap-2 mt-7 font-semibold transition-transform hover:translate-x-1"
+                        style={{
+                          color: "#2A4A7F",
+                          fontSize: "15px",
+                          borderBottom: "2px solid #E8820C",
+                          paddingBottom: "3px",
+                        }}
+                      >
+                        More on {svc.title.split(/[&/]/)[0].trim().toLowerCase()} <ArrowRight size={16} />
+                      </Link>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -299,17 +183,39 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-24" style={{ backgroundColor: "#2A4A7F" }}>
+      <section className="py-20" style={{ backgroundColor: "#0D1F3C" }}>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <div className="eyebrow mb-4">Commission a Service</div>
-            <h2 style={{ color: "#F5F4F2", fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 900, marginBottom: "16px" }}>
-              Not Sure Which Service Fits?
+            <h2
+              style={{
+                color: "#F5F4F2",
+                fontSize: "clamp(26px, 3vw, 40px)",
+                fontWeight: 900,
+                letterSpacing: "-0.02em",
+                maxWidth: "700px",
+                margin: "0 auto 20px",
+              }}
+            >
+              Not sure which you need?
             </h2>
-            <p style={{ color: "rgba(245,244,242,0.7)", fontSize: "18px", lineHeight: 1.75, maxWidth: "520px", margin: "0 auto 36px" }}>
-              One conversation is usually enough to identify the right scope. Get in touch and we'll recommend the most efficient approach for your tender.
+            <p
+              style={{
+                color: "rgba(245,244,242,0.7)",
+                fontSize: "17px",
+                maxWidth: "560px",
+                margin: "0 auto 32px",
+                lineHeight: 1.7,
+              }}
+            >
+              Most engagements combine several. A short conversation is usually enough to establish scope, programme and fee.
             </p>
-            <Link to="/contact" className="btn-amber">Discuss Your Requirements</Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 font-semibold transition-transform hover:translate-x-1"
+              style={{ backgroundColor: "#E8820C", color: "#0D1F3C", fontSize: "16px" }}
+            >
+              Get in touch <ArrowRight size={18} />
+            </Link>
           </ScrollReveal>
         </div>
       </section>

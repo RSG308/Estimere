@@ -42,17 +42,17 @@ export default function Navbar() {
               className="w-8 h-8 flex items-center justify-center"
               style={{ backgroundColor: "#E8820C" }}
             >
-              <span style={{ color: "#0D1F3C", fontWeight: 900, fontSize: "14px", letterSpacing: "-0.04em" }}>FE</span>
+              <span style={{ color: "#0D1F3C", fontWeight: 900, fontSize: "14px", letterSpacing: "-0.04em" }}>E</span>
             </div>
             <div>
               <span style={{ color: "#F5F4F2", fontWeight: 800, fontSize: "15px", letterSpacing: "-0.01em", lineHeight: 1 }}>
-                FOUNDRY
+                ESTIM
               </span>
               <span style={{ color: "#E8820C", fontWeight: 800, fontSize: "15px", letterSpacing: "-0.01em", lineHeight: 1 }}>
-                {" "}ESTIMATING
+                ERE
               </span>
               <div style={{ color: "rgba(245,244,242,0.35)", fontSize: "9px", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "monospace" }}>
-                [PLACEHOLDER NAME]
+                Estimating &amp; Tendering
               </div>
             </div>
           </Link>

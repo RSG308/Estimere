@@ -11,6 +11,12 @@ const navLinks = [
   { label: "About", path: "/about" },
 ];
 
+/** Highlights parent nav item on nested routes, e.g. /services/bid-writing -> Services */
+function isActive(pathname, path) {
+  if (path === "/") return pathname === "/";
+  return pathname === path || pathname.startsWith(`${path}/`);
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,7 +67,7 @@ export default function Navbar() {
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
-              const active = location.pathname === link.path;
+              const active = isActive(location.pathname, link.path);
               return (
                 <Link
                   key={link.path}
@@ -129,7 +135,7 @@ export default function Navbar() {
                 to={link.path}
                 className="text-sm font-semibold uppercase tracking-widest transition-colors duration-150"
                 style={{
-                  color: location.pathname === link.path ? "#E8820C" : "rgba(245,244,242,0.8)",
+                  color: isActive(location.pathname, link.path) ? "#E8820C" : "rgba(245,244,242,0.8)",
                   fontSize: "13px",
                   letterSpacing: "0.1em",
                   padding: "8px 0",

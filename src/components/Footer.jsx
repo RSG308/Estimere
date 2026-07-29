@@ -81,12 +81,12 @@ export default function Footer() {
               <li>
                 <div style={{ color: "rgba(245,244,242,0.4)", fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "4px" }}>Email</div>
                 <a
-                  href="mailto:hello@foundryestimating.co.uk"
+                  href="mailto:hello@estimere.co.uk"
                   style={{ color: "rgba(245,244,242,0.75)", fontSize: "14px" }}
                   className="hover:text-white transition-colors"
                 >
                   {/* [PLACEHOLDER: replace with real email] */}
-                  hello@foundryestimating.co.uk
+                  hello@estimere.co.uk
                 </a>
               </li>
               <li>
@@ -109,7 +109,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid rgba(214,211,205,0.1)" }}
         >
           <p style={{ color: "rgba(245,244,242,0.35)", fontSize: "12px" }}>
-            © {new Date().getFullYear()} Foundry Estimating. All rights reserved. {/* [PLACEHOLDER: update business name] */}
+            © {new Date().getFullYear()} Estimere. All rights reserved. {/* [PLACEHOLDER: update business name] */}
           </p>
           <p style={{ color: "rgba(245,244,242,0.25)", fontSize: "11px", fontFamily: "monospace", letterSpacing: "0.08em" }}>
             Professional Indemnity Insured · UK Registered

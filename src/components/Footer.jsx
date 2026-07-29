@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { services } from "@/data/services";
 
 export default function Footer() {
   return (

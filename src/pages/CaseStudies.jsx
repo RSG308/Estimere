@@ -11,7 +11,7 @@ const caseStudies = [
     tags: ["Cost Estimating", "Bid Writing", "Full Tender Management"],
     outcome: "Successful Tender Award",
     summary:
-      "[PLACEHOLDER: Replace with real project summary. Example structure below for reference.]\n\nA regional contractor engaged Foundry Estimating to lead end-to-end on a major water infrastructure framework tender. The scope encompassed a full first-principles estimate across complex pipework, civils, and MEPH elements, alongside a complete quality and technical submission. The estimate was produced from detailed drawings and specifications within a compressed tender programme of [X weeks]. The bid was submitted on time and within the agreed fee, and the client was subsequently awarded a position on the framework.",
+      "[PLACEHOLDER: Replace with real project summary. Example structure below for reference.]\n\nA regional contractor engaged Estimere to lead end-to-end on a major water infrastructure framework tender. The scope encompassed a full first-principles estimate across complex pipework, civils, and MEPH elements, alongside a complete quality and technical submission. The estimate was produced from detailed drawings and specifications within a compressed tender programme of [X weeks]. The bid was submitted on time and within the agreed fee, and the client was subsequently awarded a position on the framework.",
     value: "[PLACEHOLDER: Describe the measurable outcome — e.g. framework lot awarded, contract value secured, percentage scoring achieved on quality]",
     duration: "[PLACEHOLDER: e.g. 6-week tender programme]",
   },
@@ -24,7 +24,7 @@ const caseStudies = [
     tags: ["Rapid Go/No-Go Costing", "Cost Estimating", "Post-Tender Support"],
     outcome: "Successful Award + Post-Award Support",
     summary:
-      "[PLACEHOLDER: Replace with real project summary.]\n\nA Tier 2 principal contractor required a rapid feasibility assessment on a highways improvement opportunity before committing their internal team to a full tender programme. Foundry Estimating produced a high-level order-of-magnitude cost position within [X days], identifying key risk items and programme sensitivities. On the strength of the feasibility, the client decided to proceed. We subsequently supported the full estimate production and provided post-tender clarification responses ahead of contract award.",
+      "[PLACEHOLDER: Replace with real project summary.]\n\nA Tier 2 principal contractor required a rapid feasibility assessment on a highways improvement opportunity before committing their internal team to a full tender programme. Estimere produced a high-level order-of-magnitude cost position within [X days], identifying key risk items and programme sensitivities. On the strength of the feasibility, the client decided to proceed. We subsequently supported the full estimate production and provided post-tender clarification responses ahead of contract award.",
     value: "[PLACEHOLDER: Describe outcome and value delivered — e.g. client secured contract; risk items flagged in feasibility were mitigated prior to submission]",
     duration: "[PLACEHOLDER: e.g. 2-day feasibility + 8-week full tender]",
   },
@@ -37,7 +37,7 @@ const caseStudies = [
     tags: ["Cost Estimating", "Bid Review"],
     outcome: "Shortlisted — Preferred Bidder",
     summary:
-      "[PLACEHOLDER: Replace with real project summary.]\n\nA specialist MEPH subcontractor needed dedicated estimating resource for a significant commercial development package. Foundry Estimating managed the full subcontractor and supplier enquiry process, produced detailed rate builds for mechanical and electrical packages, and assembled the pricing schedule. A second-opinion bid review was carried out by the client's commercial director before submission, using our written review report as the basis for adjudication.",
+      "[PLACEHOLDER: Replace with real project summary.]\n\nA specialist MEPH subcontractor needed dedicated estimating resource for a significant commercial development package. Estimere managed the full subcontractor and supplier enquiry process, produced detailed rate builds for mechanical and electrical packages, and assembled the pricing schedule. A second-opinion bid review was carried out by the client's commercial director before submission, using our written review report as the basis for adjudication.",
     value: "[PLACEHOLDER: Describe outcome — e.g. shortlisted as preferred bidder; client's internal team upskilled through the process]",
     duration: "[PLACEHOLDER: e.g. 5-week tender programme]",
   },
@@ -50,7 +50,7 @@ const caseStudies = [
     tags: ["PQQ / SQ Support", "Bid Writing"],
     outcome: "Invited to Full ITT Stage",
     summary:
-      "[PLACEHOLDER: Replace with real project summary.]\n\nA regional civils and utilities contractor sought support with a high-stakes PQQ submission for a major regulated utilities framework — a gateway that, if passed, would unlock significant annual turnover opportunity. Foundry Estimating reviewed the scoring criteria, structured the capability narrative, and wrote the full PQQ response — including company track record, H&S questionnaire, and supply chain statements. The client was subsequently invited to the full ITT stage.",
+      "[PLACEHOLDER: Replace with real project summary.]\n\nA regional civils and utilities contractor sought support with a high-stakes PQQ submission for a major regulated utilities framework — a gateway that, if passed, would unlock significant annual turnover opportunity. Estimere reviewed the scoring criteria, structured the capability narrative, and wrote the full PQQ response — including company track record, H&S questionnaire, and supply chain statements. The client was subsequently invited to the full ITT stage.",
     value: "[PLACEHOLDER: Describe outcome — e.g. passed PQQ gateway; subsequently progressed to ITT and submitted full bid]",
     duration: "[PLACEHOLDER: e.g. 3-week PQQ programme]",
   },

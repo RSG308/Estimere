@@ -1,9 +1,19 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calculator, Target, CalendarClock } from "lucide-react";
+import { ArrowRight, Calculator, Target, CalendarClock, FileSearch } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import useSEO from "@/hooks/useSEO";
 
 const TOOLS = [
+  {
+    ref: "EST-TL-004",
+    slug: "itt-health-check",
+    icon: FileSearch,
+    name: "ITT Health Check",
+    tagline: "What does this tender actually require?",
+    desc: "Supply a tender pack and get a structured readout — scope in plain English, key dates, evaluation weightings, mandatory requirements, risk flags, clarifications worth raising, and an estimate of the effort involved. Your document isn't stored.",
+    time: "~40 seconds",
+    badge: "Email required",
+  },
   {
     ref: "FE-TL-002",
     slug: "bid-no-bid",
@@ -128,6 +138,20 @@ export default function Tools() {
                       >
                         {t.time}
                       </div>
+                      {t.badge && (
+                        <div
+                          style={{
+                            color: "rgba(26,26,26,0.4)",
+                            fontFamily: "monospace",
+                            fontSize: "10px",
+                            letterSpacing: "0.1em",
+                            textTransform: "uppercase",
+                            marginTop: "6px",
+                          }}
+                        >
+                          {t.badge}
+                        </div>
+                      )}
                     </div>
 
                     <div className="md:col-span-9 p-8 lg:p-10">

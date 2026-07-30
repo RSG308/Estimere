@@ -41,7 +41,7 @@ export default function Home() {
             {/* Left — copy */}
             <div>
               <div className="eyebrow mb-6">Independent Estimating Consultancy · UK-Wide</div>
-              <div className="ref-label mb-8">REF: FE-HOME-001</div>
+              <div className="ref-label mb-8">REF: EST-HOME-001</div>
               <h1
                 className="animate-fade-up"
                 style={{
@@ -103,7 +103,7 @@ export default function Home() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="eyebrow mb-3">Who We Work With</div>
-            <div className="ref-label mb-8">REF: FE-HOME-002</div>
+            <div className="ref-label mb-8">REF: EST-HOME-002</div>
             <h2 style={{ color: "#0D1F3C", fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 900, marginBottom: "16px" }}>
               Built for UK Construction.
               <br />
@@ -173,7 +173,7 @@ export default function Home() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="eyebrow mb-3">Core Services</div>
-            <div className="ref-label mb-8">REF: FE-HOME-003</div>
+            <div className="ref-label mb-8">REF: EST-HOME-003</div>
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
               <h2 style={{ color: "#0D1F3C", fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 900 }}>
                 What We Deliver.

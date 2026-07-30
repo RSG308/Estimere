@@ -116,7 +116,7 @@ export default function BidNoBidScorer() {
   return (
     <ToolLayout
       eyebrow="Tools"
-      refCode="FE-TL-002"
+      refCode="EST-TL-002"
       title="Bid / No-Bid Scorer"
       intro="Score an opportunity against seven weighted criteria before you commit estimating resource to it. Takes about two minutes."
       disclaimer="This is a decision-support aid, not advice. It structures judgement rather than replacing it — a low score on a strategically important opportunity may still justify bidding, provided that reasoning is explicit. Nothing is submitted or stored."

@@ -115,7 +115,7 @@ export default function ProgrammePlanner() {
   return (
     <ToolLayout
       eyebrow="Tools"
-      refCode="FE-TL-003"
+      refCode="EST-TL-003"
       title="Tender Programme Planner"
       intro="Enter your submission date and get a working-back programme with milestone dates. Weekends excluded."
       disclaimer="Milestone offsets are typical rather than prescriptive, and assume a standard working week with no public holidays. Adjust for your own resource, supply chain responsiveness and the actual ITT clarification deadline. Nothing is submitted or stored."

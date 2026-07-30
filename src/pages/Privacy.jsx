@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <LegalLayout
       eyebrow="Legal"
-      refCode="FE-LEG-001"
+      refCode="EST-LEG-001"
       title="Privacy Policy"
       lastUpdated="[PLACEHOLDER: DD MONTH YYYY]"
     >

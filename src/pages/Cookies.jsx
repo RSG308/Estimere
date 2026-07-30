@@ -4,7 +4,7 @@ export default function Cookies() {
   return (
     <LegalLayout
       eyebrow="Legal"
-      refCode="FE-LEG-003"
+      refCode="EST-LEG-003"
       title="Cookie Policy"
       lastUpdated="[PLACEHOLDER: DD MONTH YYYY]"
     >

@@ -68,7 +68,7 @@ export default function Pricing() {
       <section className="blueprint-grid-dark py-24" style={{ backgroundColor: "#0D1F3C", position: "relative" }}>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="eyebrow mb-3">Commercial Framework</div>
-          <div className="ref-label mb-8">REF: FE-PCE-000</div>
+          <div className="ref-label mb-8">REF: EST-PCE-000</div>
           <h1 style={{ color: "#F5F4F2", fontSize: "clamp(40px, 5vw, 68px)", fontWeight: 900, maxWidth: "700px" }}>
             Transparent Pricing.
             <br />
@@ -260,7 +260,7 @@ export default function Pricing() {
                   textTransform: "uppercase",
                 }}
               >
-                SCOPE DISCLAIMER · REF: FE-PCE-DISC
+                SCOPE DISCLAIMER · REF: EST-PCE-DISC
               </div>
               <div className="eyebrow mb-4">Scope & Quotation Note</div>
               <h3 style={{ color: "#0D1F3C", fontWeight: 800, fontSize: "22px", marginBottom: "12px" }}>

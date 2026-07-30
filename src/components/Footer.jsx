@@ -20,7 +20,7 @@ export default function Footer() {
             <p style={{ color: "rgba(245,244,242,0.55)", fontSize: "14px", lineHeight: 1.8 }}>
               Independent construction estimating and bid-writing consultancy. Serving SME through Tier 1/2 principal contractors across the UK.
             </p>
-            <div className="mt-6 ref-label">REF: FE-SITE-001</div>
+            <div className="mt-6 ref-label">REF: EST-SITE-001</div>
           </div>
 
           {/* Navigation */}

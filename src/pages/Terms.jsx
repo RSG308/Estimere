@@ -4,7 +4,7 @@ export default function Terms() {
   return (
     <LegalLayout
       eyebrow="Legal"
-      refCode="FE-LEG-002"
+      refCode="EST-LEG-002"
       title="Terms of Use"
       lastUpdated="[PLACEHOLDER: DD MONTH YYYY]"
     >

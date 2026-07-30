@@ -21,7 +21,7 @@ export default function Sectors() {
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="eyebrow mb-3">Sector Coverage</div>
-          <div className="ref-label mb-8">REF: FE-SEC-000</div>
+          <div className="ref-label mb-8">REF: EST-SEC-000</div>
           <h1
             style={{
               color: "#F5F4F2",

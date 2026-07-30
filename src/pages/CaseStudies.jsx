@@ -63,7 +63,7 @@ export default function CaseStudies() {
       <section className="blueprint-grid-dark py-24" style={{ backgroundColor: "#0D1F3C", position: "relative" }}>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="eyebrow mb-3">Audit Trail</div>
-          <div className="ref-label mb-8">REF: FE-CS-000</div>
+          <div className="ref-label mb-8">REF: EST-CS-000</div>
           <h1 style={{ color: "#F5F4F2", fontSize: "clamp(40px, 5vw, 68px)", fontWeight: 900, maxWidth: "700px" }}>
             Track Record.
             <br />

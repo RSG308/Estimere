@@ -23,7 +23,7 @@ export default function About() {
       <section className="blueprint-grid-dark py-24" style={{ backgroundColor: "#0D1F3C", position: "relative" }}>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           <div className="eyebrow mb-3">About the Consultancy</div>
-          <div className="ref-label mb-8">REF: FE-ABT-000</div>
+          <div className="ref-label mb-8">REF: EST-ABT-000</div>
           <h1 style={{ color: "#F5F4F2", fontSize: "clamp(40px, 5vw, 68px)", fontWeight: 900, maxWidth: "700px" }}>
             Senior Expertise.
             <br />
@@ -77,7 +77,7 @@ export default function About() {
             <div className="lg:col-span-7">
               <ScrollReveal>
                 <div className="eyebrow mb-3">The Founder</div>
-                <div className="ref-label mb-6">REF: FE-ABT-001</div>
+                <div className="ref-label mb-6">REF: EST-ABT-001</div>
 
                 {/* Photo placeholder */}
                 <div
@@ -131,7 +131,7 @@ export default function About() {
               <ScrollReveal delay={100}>
                 <div>
                   <div className="eyebrow mb-3">Sectors Covered</div>
-                  <div className="ref-label mb-6">REF: FE-ABT-002</div>
+                  <div className="ref-label mb-6">REF: EST-ABT-002</div>
                   <div className="space-y-3">
                     {sectors.map((sec, i) => (
                       <div

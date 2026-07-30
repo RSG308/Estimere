@@ -59,7 +59,7 @@ export default function BlueprintHero({ className = "" }) {
 
       {/* Reference callout */}
       <rect x="8" y="360" width="120" height="28" fill="none" stroke="rgba(42,74,127,0.4)" strokeWidth="0.75" />
-      <text x="16" y="372" fill="rgba(214,211,205,0.5)" fontSize="7" fontFamily="monospace">DWG: FE-STRUCT-001</text>
+      <text x="16" y="372" fill="rgba(214,211,205,0.5)" fontSize="7" fontFamily="monospace">DWG: EST-STRUCT-001</text>
       <text x="16" y="382" fill="rgba(214,211,205,0.35)" fontSize="7" fontFamily="monospace">SCALE: 1:200 REV: A</text>
 
       {/* Structural node points */}

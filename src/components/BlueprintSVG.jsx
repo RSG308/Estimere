@@ -69,7 +69,7 @@ export default function BlueprintSVG({ className = "" }) {
       <rect x="280" y="400" width="140" height="48" stroke="rgba(42,74,127,0.4)" strokeWidth="0.75" fill="none" />
       <line x1="280" y1="415" x2="420" y2="415" stroke="rgba(42,74,127,0.3)" strokeWidth="0.5" />
       <text x="350" y="411" textAnchor="middle" fill="rgba(245,244,242,0.2)" fontSize="7" fontFamily="Courier New" letterSpacing="0.1em">ESTIMERE</text>
-      <text x="350" y="428" textAnchor="middle" fill="rgba(232,130,12,0.35)" fontSize="7" fontFamily="Courier New" letterSpacing="0.08em">DWG REF: FE-SITE-001</text>
+      <text x="350" y="428" textAnchor="middle" fill="rgba(232,130,12,0.35)" fontSize="7" fontFamily="Courier New" letterSpacing="0.08em">DWG REF: EST-SITE-001</text>
       <text x="350" y="441" textAnchor="middle" fill="rgba(245,244,242,0.15)" fontSize="7" fontFamily="Courier New">SCALE 1:500</text>
     </svg>
   );

@@ -8,10 +8,13 @@ const navLinks = [
   { label: "Sectors", path: "/sectors" },
   { label: "Tools", path: "/tools" },
   { label: "Pricing", path: "/pricing" },
-  { label: "Case Studies", path: "/case-studies" },
   { label: "Insights", path: "/insights" },
   { label: "About", path: "/about" },
 ];
+
+// [PLACEHOLDER] Case Studies is intentionally omitted from navigation while its
+// content is unpopulated. Restore { label: "Case Studies", path: "/case-studies" }
+// once real anonymised projects are in place. The route still works directly.
 
 /** Highlights parent nav item on nested routes, e.g. /services/bid-writing -> Services */
 function isActive(pathname, path) {

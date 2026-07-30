@@ -15,6 +15,8 @@ import Services from "@/pages/Services";
 import ServiceDetail from "@/pages/ServiceDetail";
 import Sectors from "@/pages/Sectors";
 import SectorDetail from "@/pages/SectorDetail";
+import Insights from "@/pages/Insights";
+import InsightDetail from "@/pages/InsightDetail";
 import Pricing from "@/pages/Pricing";
 import CaseStudies from "@/pages/CaseStudies";
 import About from "@/pages/About";
@@ -41,6 +43,8 @@ function App() {
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/sectors" element={<Sectors />} />
               <Route path="/sectors/:slug" element={<SectorDetail />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<InsightDetail />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/about" element={<About />} />

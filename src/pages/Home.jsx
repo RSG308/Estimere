@@ -53,11 +53,11 @@ export default function Home() {
                   marginBottom: "28px",
                 }}
               >
-                PRECISION
+                ESTIMATING
                 <br />
-                IN EVERY
+                AND BIDS,
                 <br />
-                <span style={{ color: "#E8820C" }}>QUANTITY.</span>
+                <span style={{ color: "#E8820C" }}>PRICED PROPERLY.</span>
               </h1>
               <p
                 className="animate-fade-up"
@@ -72,7 +72,7 @@ export default function Home() {
                   animation: "fadeUp 0.7s ease 0.15s forwards",
                 }}
               >
-                Senior estimating and bid-writing expertise — civils, utilities, MEPH, and principal contractor works — delivered remotely across the UK. Win more work without carrying the overhead.
+                Senior estimating and bid writing for UK contractors — civils, utilities, MEPH and principal contractor works. Remote-first, with site visits where they affect the price.
               </p>
               <div className="flex flex-wrap gap-4" style={{ animation: "fadeUp 0.7s ease 0.3s forwards", opacity: 0 }}>
                 <Link to="/contact" className="btn-amber">Start an Enquiry</Link>

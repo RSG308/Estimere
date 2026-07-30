@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { base44 } from "@/api/base44Client";
+import {
+  sendEnquiryNotification,
+  sendEnquiryAcknowledgement,
+  trySend,
+} from "@/lib/email";
 
 const PROJECT_TYPES = [
   "Civils & Earthworks",
@@ -32,14 +37,21 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
     try {
-      await base44.entities.Enquiry.create({
+      const payload = {
         ...form,
         submitted_date: new Date().toISOString(),
         status: "new",
-      });
+      };
+      await base44.entities.Enquiry.create(payload);
+
+      // Record is saved at this point. Email is best-effort only — a send
+      // failure must not present as a failed submission to the user.
+      trySend(sendEnquiryNotification, payload);
+      if (payload.email) trySend(sendEnquiryAcknowledgement, payload);
+
       setStatus("success");
       setForm({ name: "", company: "", email: "", phone: "", project_type: "", message: "" });
-    } catch (err) {
+    } catch {
       setStatus("error");
     }
   };

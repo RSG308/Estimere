@@ -33,6 +33,7 @@ export default function Footer() {
                 { label: "Sectors", path: "/sectors" },
                 { label: "Pricing", path: "/pricing" },
                 { label: "Case Studies", path: "/case-studies" },
+                { label: "Insights", path: "/insights" },
                 { label: "About", path: "/about" },
                 { label: "Contact", path: "/contact" },
               ].map((link) => (

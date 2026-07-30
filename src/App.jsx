@@ -21,6 +21,10 @@ import Tools from "@/pages/Tools";
 import FeeEstimator from "@/pages/tools/FeeEstimator";
 import BidNoBidScorer from "@/pages/tools/BidNoBidScorer";
 import ProgrammePlanner from "@/pages/tools/ProgrammePlanner";
+import IttHealthCheck from "@/pages/tools/IttHealthCheck";
+import Admin from "@/pages/Admin";
+import Account from "@/pages/Account";
+import AdminRoute from "@/components/AdminRoute";
 import Pricing from "@/pages/Pricing";
 import CaseStudies from "@/pages/CaseStudies";
 import About from "@/pages/About";
@@ -53,6 +57,25 @@ function App() {
               <Route path="/tools/fee-estimator" element={<FeeEstimator />} />
               <Route path="/tools/bid-no-bid" element={<BidNoBidScorer />} />
               <Route path="/tools/programme-planner" element={<ProgrammePlanner />} />
+              <Route path="/tools/itt-health-check" element={<IttHealthCheck />} />
+
+              {/* Authenticated */}
+              <Route
+                path="/account"
+                element={
+                  <ProtectedRoute>
+                    <Account />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/admin"
+                element={
+                  <AdminRoute>
+                    <Admin />
+                  </AdminRoute>
+                }
+              />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/about" element={<About />} />

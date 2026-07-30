@@ -17,6 +17,10 @@ import Sectors from "@/pages/Sectors";
 import SectorDetail from "@/pages/SectorDetail";
 import Insights from "@/pages/Insights";
 import InsightDetail from "@/pages/InsightDetail";
+import Tools from "@/pages/Tools";
+import FeeEstimator from "@/pages/tools/FeeEstimator";
+import BidNoBidScorer from "@/pages/tools/BidNoBidScorer";
+import ProgrammePlanner from "@/pages/tools/ProgrammePlanner";
 import Pricing from "@/pages/Pricing";
 import CaseStudies from "@/pages/CaseStudies";
 import About from "@/pages/About";
@@ -45,6 +49,10 @@ function App() {
               <Route path="/sectors/:slug" element={<SectorDetail />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/:slug" element={<InsightDetail />} />
+              <Route path="/tools" element={<Tools />} />
+              <Route path="/tools/fee-estimator" element={<FeeEstimator />} />
+              <Route path="/tools/bid-no-bid" element={<BidNoBidScorer />} />
+              <Route path="/tools/programme-planner" element={<ProgrammePlanner />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/about" element={<About />} />

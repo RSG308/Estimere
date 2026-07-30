@@ -7,7 +7,7 @@ import {
 
 const services = [
   { icon: Calculator, label: "Cost Estimating", desc: "First-principles pricing, subcontractor enquiry management, and detailed rate builds.", ref: "SVC-001" },
-  { icon: FileText, label: "Bid Writing", desc: "Method statements, executive summaries, and quality/technical submissions that win.", ref: "SVC-002" },
+  { icon: FileText, label: "Bid Writing", desc: "Method statements, executive summaries, and quality submissions written against the evaluation criteria.", ref: "SVC-002" },
   { icon: Shield, label: "Full Tender Management", desc: "End-to-end estimate, write, and submit — full service from invitation to handover.", ref: "SVC-003" },
   { icon: Zap, label: "Rapid Go / No-Go Costing", desc: "Fast, high-level feasibility costing before committing to a full bid programme.", ref: "SVC-004" },
   { icon: HardHat, label: "PQQ / SQ Support", desc: "Pre-qualification and selection questionnaire submissions to get you to the next stage.", ref: "SVC-005" },
@@ -25,7 +25,7 @@ const clientTiers = [
   { tier: "SME", label: "Small & Medium Contractors", desc: "Regional specialists who need tender-quality estimating without the overhead of a full-time senior estimator." },
   { tier: "T2", label: "Tier 2 Contractors", desc: "Growing regional and national contractors tendering for larger frameworks and principal contractor packages." },
   { tier: "T1", label: "Tier 1 Principals", desc: "Major contractors requiring surge capacity, specialist sector knowledge, or second-opinion QA on key bids." },
-  { tier: "ALL", label: "Any Sector, Any Scale", desc: "Civils, utilities, MEPH, and principal contractor works — if it gets tendered in the UK, we can support it." },
+  { tier: "ALL", label: "Any Sector, Any Scale", desc: "Civils, utilities, MEPH, and principal contractor works — four sectors, priced from first principles." },
 ];
 
 export default function Home() {

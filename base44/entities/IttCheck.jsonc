@@ -1,0 +1,58 @@
+{
+  "name": "IttCheck",
+  "type": "object",
+  "description": "Log of ITT Health Check runs. Deliberately stores only request metadata - never the tender document or the analysis output, both of which are commercially sensitive to the enquirer.",
+  "properties": {
+    "email": {
+      "type": "string",
+      "title": "Email Address"
+    },
+    "company": {
+      "type": "string",
+      "title": "Company"
+    },
+    "document_name": {
+      "type": "string",
+      "title": "Document Name"
+    },
+    "input_method": {
+      "type": "string",
+      "title": "Input Method",
+      "enum": [
+        "upload",
+        "paste"
+      ]
+    },
+    "run_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Run Date"
+    },
+    "followed_up": {
+      "type": "boolean",
+      "title": "Followed Up",
+      "default": false
+    }
+  },
+  "required": [
+    "email"
+  ],
+  "rls": {
+    "create": null,
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
